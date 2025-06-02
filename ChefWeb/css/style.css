@@ -1,0 +1,711 @@
+/* ======= ΒΑΣΙΚΟ STYLE (index.html) ======= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-link.active {
+  color: hotpink;
+  font-weight: bold;
+  border-bottom: 2px solid hotpink;
+  text-decoration: none;
+}
+
+.header {
+  background-color: black;
+  color: hotpink;
+  padding-left: 30px;
+  font-family: Georgia, serif;
+}
+.welcome-message {
+    color: hotpink;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu-list {
+  margin: 10px;
+  padding-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Helvetica Neue;
+  transition: 0.5s ease-in-out;
+}
+
+.menu-list-item {
+  margin-left: 60px;
+  padding: 10px 0;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: underline;
+}
+
+.menu-link:hover {
+  color: hotpink;
+}
+
+.logo {
+  background-color: darkblue;
+  border-top: 2px solid hotpink;
+  border-bottom: 2px solid hotpink;
+  font-family: Helvetica Neue;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0; 
+  height: auto; 
+}
+
+#logo-img {
+  width: 15%;
+  max-width: 100%;
+  height: auto;
+  padding-left: 20px;
+}
+
+.phrase {
+  flex: 1;
+  text-align: center;
+  font-size: 1.0em;
+  color: white;
+}
+
+#subtitle{
+  font-family: Apple Chancery;
+  color: hotpink;
+  padding-left: 70px;
+  font-size: 150%;
+}
+
+/* ======= ΚΑΤΗΓΟΡΙΕΣ ======= */
+
+.categories {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 2% 0;
+}
+
+.row1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+  width: 80%;
+  padding: 2% 0;
+}
+
+.category1, .category2, .category3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  min-height: 300px; 
+}
+
+.category1 p, .category2 p, .category3 p {
+  margin-top: auto;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: white;
+  font-family: Helvetica Neue, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.category1:hover p,
+.category2:hover p,
+.category3:hover p {
+  color: hotpink;
+}
+
+.cuisine {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 30px;
+}
+.category1:hover .cuisine,
+.category2:hover .cuisine,
+.category3:hover .cuisine {
+  transform: scale(1.20);
+  transition: transform 0.3s ease;
+}
+
+/* ======= ΣΥΝΤΑΓΕΣ ======= */
+
+.page-container {
+  margin-top: 15px;     
+  margin-bottom: 40px;  
+  padding: 0 20px;
+}
+
+.recipe-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.recipe-card {
+  width: 250px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.recipe-thumb {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.btn-view {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: orange;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.card-buttons {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ======= Προβολή Μίας Συνταγής (view_recipe.php) ======= */
+
+.recipe-full-container {
+  width: 90%;
+  max-width: 360px;
+  margin: 40px auto 60px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.recipe-full-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.recipe-full-container h2 {
+  text-align: center;
+  color: orange;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.recipe-full-container p {
+  font-size: 0.95em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.recipe-full-container .description {
+  font-size: 1em;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.btn-nav {
+  display: inline-block;
+  background-color: #ff704d;
+  color: white;
+  padding: 6px 12px;
+  margin: 0 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-nav:hover {
+  background-color: hotpink;
+}
+
+/* ======= Σχόλια ======= */
+.comment-box {
+  background: #f9f9f9;
+  border-left: 4px solid orange;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+/* ======= Κουμπιά Επεξεργασίας ======= */
+.btn-edit {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 6px 12px;
+  background: orange;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* ======= Κουμπί Διαγραφής Συνταγής ======= */
+.btn-delete {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #e53935;        
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-delete:hover {
+  background: #c62828;       
+  transform: scale(1.05);
+}
+
+/* ======= Κουμπί Αφαίρεσης από Αγαπημένα ======= */
+
+.remove-btn.saved {
+  background-color: hotpink;
+  font-weight: bold;
+}
+
+.prev-next-links {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.like-save-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.like-count {
+  margin-top: 6px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.save-message {
+  margin-top: 6px;
+  font-size: 0.9em;
+  display: block;
+  color: #333;
+}
+
+/* ======= Βασική μορφοποίηση Like & Save ======= */
+.like-btn,
+.save-btn,
+.remove-btn  {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 0.9em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+/* ======= Όταν είναι ενεργά ======= */
+.liked,
+.saved {
+  background-color: hotpink;
+  color: white;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+
+/* ======= Flash Message ======= */
+.flash-message {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: orange;
+  color: black;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  animation: fadeInOut 4s forwards;
+  z-index: 9999;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+}
+
+/* ======= FOOTER ======= */
+footer {
+  background-color: darkblue;       
+  color: white;                       
+  padding: 2%;                        
+  border-top: 2px solid hotpink;      
+  display: grid;                      
+  grid-template-columns: 30% 30% 30%; 
+  padding-right: 0px;
+  font-weight: bold;
+}
+
+/* ======= Στήλη 1: Δημοφιλείς κατηγορίες ======= */
+.popular {
+  text-align: left;
+  padding-left: 10%;
+}
+
+/* ======= Στήλη 2: Δραστηριότητα ======= */
+.activity {
+  text-align: left;
+  padding-left: 50%; /* Σκόπιμη μετατόπιση */
+}
+
+/* ======= Στήλη 3: Social Media ======= */
+.social-media {
+  text-align: right;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: end;
+  padding-right: 0px;
+  font-size: 110%;
+}
+
+#social {
+  width: 40%;
+  height: auto;
+  padding-right: 20px;
+}
+
+/* ======= Σύνδεσμοι footer ======= */
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: hotpink;
+  text-decoration: underline;
+}
+
+/* ======= Τίτλοι footer ======= */
+.footer-heading {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.1em;
+  color: hotpink;
+  margin-bottom: 10px;
+}
+
+/* ======= Εμφάνιση λίστας κειμένων footer ======= */
+.popular p,
+.activity p {
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+/* ======= Πνευματικά δικαιώματα στο κάτω μέρος του social ======= */
+footer .copyright {
+  display: block;
+  margin-top: 10px;
+  padding-right: 25px;
+  font-size: 0.9em;
+  color: white;
+  opacity: 0.7;
+}
+
+/* ======= POPUPS ======= */
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+}
+
+.popup-box {
+  background-color: #1a1a1a;
+  border: 3px solid orange;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+  animation: zoomIn 0.3s ease;
+  position: relative;
+}
+
+.popup-box h3 {
+  color: white;
+  margin-bottom: 30px;
+  font-family: Helvetica Neue;
+}
+
+.popup-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: orange;
+  color: black;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.popup-button:hover {
+  background-color: #a238a6;
+  transform: scale(1.1);
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.popup-close:hover {
+  color: orange;
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+/* ======= FORM STYLE ======= */
+.form-container {
+  background-color: #1a1a1a;
+  border: 2px solid orange;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 400px;
+  margin: 50px auto;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.form-container h2 {
+  color: orange;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.form-container input, 
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 1em;
+}
+
+.form-container input[type="submit"] {
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #a238a6;
+  transform: scale(1.05);
+}
+
+/* ======= ERROR MESSAGE ======= */
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ================ RESPONSIVE DESIGN =====================*/
+
+@media (max-width: 1024px) {
+  .row1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-list {
+    padding-right: 20px;
+  }
+
+  .menu-list-item {
+    margin-left: 30px;
+  }
+
+  .activity {
+    padding-left: 20%;
+  }
+
+  .social-media {
+    font-size: 100%;
+  }
+
+  #subtitle {
+    font-size: 120%;
+    padding-left: 30px;
+  }
+
+  #logo-img {
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin-left: 20px;
+  }
+
+  .menu-list-item {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .row1 {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .cuisine {
+    width: 180px;
+    height: 180px;
+  }
+
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  #logo-img {
+    width: 40%;
+    padding-left: 0;
+  }
+
+  .phrase {
+    font-size: 0.9em;
+    margin-top: 10px;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .popular, .activity, .social-media {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  #social {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-card {
+    width: 90%;
+  }
+
+  .recipe-full-container {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .popup-box {
+    padding: 20px;
+  }
+
+  .popup-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-container {
+    padding: 20px;
+    margin: 30px auto;
+  }
+}
+
