@@ -37,8 +37,3 @@ To set up the database:
 1. Import `ChefWeb.sql` via phpMyAdmin or MySQL CLI.
 2. Make sure your `db_connection.php` points to the correct database credentials.
 
-## ⚙️ Setup Instructions
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Ioannis-Garmpidis/ChefWeb.git
