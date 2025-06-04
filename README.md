@@ -41,4 +41,4 @@ To set up the database:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ChefWeb.git
+   git clone https://github.com/Ioannis-Garmpidis/ChefWeb.git
